@@ -1,3 +1,67 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "David Sozashvili",
+      "email": "davidsozashvili@gmail.com",
+      "role": "Admin",
+      "active": false,
+      "id": 1
+    },
+    {
+      "name": "Dato Sozashvili",
+      "email": "sozashvilidavid@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 2
+    },
+    {
+      "name": "Vakho Nakashidze",
+      "email": "vakho@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 3
+    },
+    {
+      "name": "Roin Phutkaradze",
+      "email": "vakho@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 4
+    },
+    {
+      "name": "Tornike",
+      "email": "Tornike@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 5
+    },
+    {
+      "name": "Jemali",
+      "email": "Jemali@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 6
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 7
+    },
+    {
+      "name": "Jim Carry",
+      "email": "jim@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 8
+    },
+    {
+      "name": "Bruce Lee",
+      "email": "lee@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 9
+    }
+  ]
 }

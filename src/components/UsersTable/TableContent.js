@@ -1,6 +1,6 @@
 
-function TableHeader() {
-
+function TableContent() {
+    
     return (
         <div>
 
@@ -8,4 +8,4 @@ function TableHeader() {
     );
 }
 
-export default TableHeader;
+export default TableContent;
