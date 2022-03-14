@@ -19,7 +19,7 @@ function App() {
   },[])
 
   return (
-    <div className="App pt-24">
+    <div className="App pt-24 font-titillium">
 		<Users />
     </div>
   );
