@@ -1,8 +1,7 @@
-function User() {
-    return (
-        <div>
 
-        </div>
+function User({name, email, role, active}) {
+    return (
+        <div></div>
     );
 }
 

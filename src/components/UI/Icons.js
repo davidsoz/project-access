@@ -71,8 +71,8 @@ export function SearchIcon(props) {
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
       <g id="vuesax_linear_search-normal" data-name="vuesax/linear/search-normal" transform="translate(-428 -188)">
         <g id="search-normal" transform="translate(428 188)">
-          <path id="Vector" d="M12.648,6.324A6.324,6.324,0,1,1,6.324,0,6.324,6.324,0,0,1,12.648,6.324Z" transform="translate(1.341 1.341)" fill="none" stroke="#292d32" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-          <path id="Vector-2" data-name="Vector" d="M1.341,1.341,0,0" transform="translate(13.318 13.318)" fill="none" stroke="#292d32" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="Vector" d="M12.648,6.324A6.324,6.324,0,1,1,6.324,0,6.324,6.324,0,0,1,12.648,6.324Z" transform="translate(1.341 1.341)" fill="none" stroke="#292d32" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+          <path id="Vector-2" data-name="Vector" d="M1.341,1.341,0,0" transform="translate(13.318 13.318)" fill="none" stroke="#292d32" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
           <path id="Vector-3" data-name="Vector" d="M0,0H16V16H0Z" fill="none" opacity="0"/>
         </g>
       </g>
@@ -85,10 +85,27 @@ export function PlusIcon(props) {
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
       <circle id="Ellipse_1" data-name="Ellipse 1" cx="36" cy="36" r="36" fill="#2a84ff"/>
       <g id="Group_1" data-name="Group 1" transform="translate(28.491 28.491)">
-        <path id="Vector" d="M0,0H16" transform="translate(0 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-        <path id="Vector-2" data-name="Vector" d="M0,16V0" transform="translate(8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path id="Vector" d="M0,0H16" transform="translate(0 8)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
+        <path id="Vector-2" data-name="Vector" d="M0,16V0" transform="translate(8)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
       </g>
     </svg>
   )
 };
 
+export function SwitchOn(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="40" height="20" rx="10" fill="#2a84ff"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="8" cy="8" r="8" transform="translate(22 2)" fill="#fff"/>
+    </svg>
+  )
+};
+
+export function SwitchOff(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="40" height="20" rx="10" fill="#26292e" opacity="0.2"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="8" cy="8" r="8" transform="translate(2 2)" fill="#fff"/>
+    </svg>
+  )
+};

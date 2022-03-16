@@ -1,26 +1,37 @@
-import { useEffect, useState } from "react";
-import Avatar from "./components/UI/Avatar";
-import CheckBox from "./components/UI/CheckBox";
-import DropDown from "./components/UI/DropDown";
-import { PlusIcon } from "./components/UI/Icons";
-import Input from "./components/UI/Input";
+import { useCallback, useContext, useEffect, useMemo, useRef } from "react";
+import UsersContext from "./contexts/UsersContext";
+import { buildUsersFetchUrl } from "./helpers";
 import Users from "./pages/Users";
 
 function App() {
+  const usersContext = useContext(UsersContext);
 
-  const [users, setUsers] = useState([])
+  const isMounted = useRef(false);
+  const deps = useMemo(() => ['search', 'page', 'perPage', 'sort', 'order'].map(el => usersContext.state[el]), [usersContext.state]);
+
+  const fetchUsers = useCallback( () => {
+    fetch(buildUsersFetchUrl('http://localhost:8000/users', usersContext.state))
+    .then(res => {console.log(res.headers.get('X-Total-Count')); return res.json()})
+    .then(data => {
+      usersContext.dispatch({type: 'SET_USERS', payload: data});
+    });
+  });
 
   useEffect(() => {
-    fetch('http://localhost:8000/users')
-    .then(res => res.json())
-    .then(data => {
-      setUsers(data)
-    })
+    fetchUsers()
   },[])
+
+  useEffect(() => {
+    if(isMounted.current) {
+      fetchUsers();
+    } else {
+      isMounted.current = true;
+    }
+  },deps);
 
   return (
     <div className="App pt-24 font-titillium">
-		<Users />
+		    <Users />
     </div>
   );
 }

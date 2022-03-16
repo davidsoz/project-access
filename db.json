@@ -4,63 +4,63 @@
       "name": "David Sozashvili",
       "email": "davidsozashvili@gmail.com",
       "role": "Admin",
-      "active": false,
+      "active": 1,
       "id": 1
     },
     {
       "name": "Dato Sozashvili",
       "email": "sozashvilidavid@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 2
     },
     {
       "name": "Vakho Nakashidze",
       "email": "vakho@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 3
     },
     {
       "name": "Roin Phutkaradze",
       "email": "vakho@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 4
     },
     {
       "name": "Tornike",
       "email": "Tornike@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 5
     },
     {
       "name": "Jemali",
       "email": "Jemali@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 6
     },
     {
       "name": "John Doe",
       "email": "johndoe@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 1,
       "id": 7
     },
     {
       "name": "Jim Carry",
       "email": "jim@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 0,
       "id": 8
     },
     {
       "name": "Bruce Lee",
       "email": "lee@gmail.com",
       "role": "User",
-      "active": false,
+      "active": 1,
       "id": 9
     }
   ]
