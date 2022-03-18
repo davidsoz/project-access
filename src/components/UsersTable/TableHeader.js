@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
+import { SearchIcon } from "../UI/Icons";
 import Input from "../UI/Input";
 
 function TableHeader() {
@@ -11,6 +12,7 @@ function TableHeader() {
             <Input 
                 onChange={e => usersContext.dispatch({type: 'SEARCH', payload: e.target.value})} 
                 type='search' 
+                Icon={SearchIcon}
                 placeholder='Type to filter the table...'/>
         </div>
     );

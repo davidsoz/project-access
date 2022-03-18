@@ -1,33 +1,30 @@
-import { useCallback, useContext, useEffect, useMemo, useRef } from "react";
+import {useContext, useEffect } from "react";
+import { fetchUsers } from "./api";
 import UsersContext from "./contexts/UsersContext";
-import { buildUsersFetchUrl } from "./helpers";
 import Users from "./pages/Users";
 
 function App() {
-  const usersContext = useContext(UsersContext);
-
-  const isMounted = useRef(false);
-  const deps = useMemo(() => ['search', 'page', 'perPage', 'sort', 'order'].map(el => usersContext.state[el]), [usersContext.state]);
-
-  const fetchUsers = useCallback( () => {
-    fetch(buildUsersFetchUrl('http://localhost:8000/users', usersContext.state))
-    .then(res => {console.log(res.headers.get('X-Total-Count')); return res.json()})
-    .then(data => {
-      usersContext.dispatch({type: 'SET_USERS', payload: data});
-    });
-  });
+  const {
+    state: {
+      page, 
+      perPage, 
+      order, 
+      sort, 
+      search
+    },
+    dispatch
+  } = useContext(UsersContext);
 
   useEffect(() => {
-    fetchUsers()
-  },[])
-
-  useEffect(() => {
-    if(isMounted.current) {
-      fetchUsers();
-    } else {
-      isMounted.current = true;
-    }
-  },deps);
+    fetchUsers({
+      _page: page,
+      _limit: perPage,
+      _order: order,
+      _sort: sort,
+      q: search,
+    })
+    .then(res => dispatch({type: 'SET_USERS', payload: res}))
+  }, [dispatch, page, perPage, order, sort, search])
 
   return (
     <div className="App pt-24 font-titillium">

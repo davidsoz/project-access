@@ -15,32 +15,11 @@
       "id": 2
     },
     {
-      "name": "Vakho Nakashidze",
-      "email": "vakho@gmail.com",
-      "role": "User",
-      "active": 0,
-      "id": 3
-    },
-    {
-      "name": "Roin Phutkaradze",
-      "email": "vakho@gmail.com",
-      "role": "User",
-      "active": 0,
-      "id": 4
-    },
-    {
       "name": "Tornike",
       "email": "Tornike@gmail.com",
       "role": "User",
       "active": 0,
       "id": 5
-    },
-    {
-      "name": "Jemali",
-      "email": "Jemali@gmail.com",
-      "role": "User",
-      "active": 0,
-      "id": 6
     },
     {
       "name": "John Doe",
@@ -57,11 +36,16 @@
       "id": 8
     },
     {
-      "name": "Bruce Lee",
-      "email": "lee@gmail.com",
+      "name": "DAVITI",
+      "email": "sozashvilidavid@gmail.com",
       "role": "User",
-      "active": 1,
-      "id": 9
+      "id": 15
+    },
+    {
+      "name": "Test User",
+      "email": "test@test.com",
+      "role": "Admin",
+      "id": 16
     }
   ]
 }

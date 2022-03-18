@@ -1,6 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UsersContext from "../../contexts/UsersContext";
 import { DropDownIcon, PlusIcon } from "../UI/Icons";
+import Modal from "../UI/Modal";
+import DeleteForm from "../UserSetup/DeleteForm";
+import UserDetalesForm from "../UserSetup/UserDetalesForm";
 import TableRow from "./TableRow";
 
 const headings = [
@@ -35,18 +38,35 @@ const headings = [
 function TableContent() {
     const usersContext = useContext(UsersContext);
 
+    const [action, setAction] = useState(null);
+    const [selectedUser, setSelectedUser] = useState(null);
+
     function sortHandler(heading) {
         if(heading.sortable) {
             usersContext.dispatch({type: 'SORT', payload: heading.name})
         }
     }
 
+    function removeHandler(user) {
+        setSelectedUser(user);
+        setAction('DELETING')
+    }
+
     return (
         <div className="mt-20">
+             {
+                action && 
+                <Modal onClose={() => setAction(null)}>
+                    {action === 'DELETING' ? 
+                        <DeleteForm selectedUser={selectedUser} closeModal={() => setAction(null)}/> : 
+                        <UserDetalesForm closeModal={() => setAction(null)}/>
+                    }
+                </Modal>
+            }
             <div className="border-y-1 border-opacity-10 py-5">
                 <div className="relative basic-container flex justify-between">
                     <div className="absolute -top-14 -left-3 cursor-pointer">
-                        <PlusIcon />
+                        <PlusIcon onClick={() => setAction('CREATING')}/>
                     </div>
                     {headings.map((heading, i) => (
                         <div className={`
@@ -66,10 +86,8 @@ function TableContent() {
                 {
                     usersContext.state.users.map(user => (
                         <TableRow key={user.id}
-                            name={user.name} 
-                            email={user.email} 
-                            role={user.role}
-                            active={user.active}
+                            user={user}
+                            onRemoveClick={removeHandler}
                         />
                     ))
                 }

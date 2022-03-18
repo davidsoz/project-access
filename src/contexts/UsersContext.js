@@ -1,12 +1,13 @@
-import React, { useReducer } from 'react';
+import React, { useMemo, useReducer } from 'react';
 
 const initialState = {
     users: [],
     search: '',
     page: 1,
-    perPage: 2,
+    perPage: 5,
     sort: 'name',
-    order: 'asc'
+    order: 'asc',
+    total: 0,
 };
 
 function reducer(state, action) {
@@ -14,7 +15,29 @@ function reducer(state, action) {
         case 'SET_USERS':
             return {
                 ...state,
-                users: action.payload
+                users: action.payload.data,
+                total: action.payload.total
+            };
+        case 'ADD_USER':
+            return {
+                ...state,
+                users: [...state.users, action.payload],
+                total: state.total + 1
+            };
+        case 'DELETE_USER':
+            const nextUsers = [...state.users];
+            let userIndex = nextUsers.findIndex(user => user.id === action.payload);
+
+            if(userIndex < 0) {
+                return state;
+            }
+
+            nextUsers.splice(userIndex, 1);
+
+            return {
+                ...state,
+                users: nextUsers,
+                total: state.total - 1
             };
         case 'SEARCH':
             return {
@@ -30,7 +53,25 @@ function reducer(state, action) {
         case 'CHANGE_PER_PAGE':
             return {
                 ...state,
-                perPage: action.payload
+                perPage: action.payload,
+                page: 1
+            }
+        case 'PREV_PAGE':
+            if(state.page === 1) {
+                return state;
+            }
+            return {
+                ...state,
+                page: state.page - 1
+            }
+        case 'NEXT_PAGE':
+            const lastPage = Math.ceil(state.total/state.perPage);
+            if(lastPage === state.page) {
+                return state;
+            }
+            return {
+                ...state,
+                page: state.page + 1
             }
         case 'SORT':
             const nextState = {...state};
@@ -51,8 +92,10 @@ const UsersContext = React.createContext(initialState);
 export function UsersContextProvider({children}) {
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    const lastPage = useMemo(() => Math.ceil(state.total/state.perPage), [state.total, state.perPage]) 
+
     return (
-        <UsersContext.Provider value={{state, dispatch}}>
+        <UsersContext.Provider value={{state, dispatch, lastPage}}>
             {children}
         </UsersContext.Provider>
     );

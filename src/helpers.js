@@ -1,3 +1,11 @@
 export function buildUsersFetchUrl(baseUrl, params) {
-    return `${baseUrl}?_page=${params.page}&_limit=${params.perPage}&_order=${params.order}&_sort=${params.sort}&q=${params.search}`
+    let res = baseUrl + '?';
+
+    for(let key in params) {
+        res += key + '=' + params[key] + '&';
+    }
+
+    res = res.slice(0, -1);
+
+    return res;
 }

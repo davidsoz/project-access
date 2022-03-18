@@ -32,6 +32,19 @@ export function RemoveIcon(props) {
 export function AdminKeyIcon(props) {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+      <g id="key" transform="translate(-684 -188)">
+        <path id="Vector" d="M11.805,8.574A5.026,5.026,0,0,1,6.763,9.815L3.638,12.933a1.284,1.284,0,0,1-.989.325l-1.446-.2a1.253,1.253,0,0,1-1-1l-.2-1.446a1.337,1.337,0,0,1,.325-.989L3.452,6.511a5.024,5.024,0,1,1,8.354,2.063Z" transform="translate(685.363 189.37)" fill="none" stroke="#2a84ff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+        <path id="Vector-2" data-name="Vector" d="M0,0,1.57,1.57" transform="translate(688.582 199.631)" fill="none" stroke="#2a84ff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+        <path id="Vector-3" data-name="Vector" d="M2.048,1.024A1.024,1.024,0,1,1,1.024,0,1.024,1.024,0,0,1,2.048,1.024Z" transform="translate(692.637 193.315)" fill="none" stroke="#2a84ff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+        <path id="Vector-4" data-name="Vector" d="M0,0H16V16H0Z" transform="translate(700 204) rotate(180)" fill="none" opacity="0"/>
+      </g>
+    </svg>
+  )
+};
+
+export function KeyIcon(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
       <g id="key" transform="translate(-684 -188)" opacity="0.4">
         <path id="Vector" d="M11.805,8.574A5.026,5.026,0,0,1,6.763,9.815L3.638,12.933a1.284,1.284,0,0,1-.989.325l-1.446-.2a1.253,1.253,0,0,1-1-1l-.2-1.446a1.337,1.337,0,0,1,.325-.989L3.452,6.511a5.024,5.024,0,1,1,8.354,2.063Z" transform="translate(685.363 189.37)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
         <path id="Vector-2" data-name="Vector" d="M0,0,1.57,1.57" transform="translate(688.582 199.631)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
@@ -109,3 +122,66 @@ export function SwitchOff(props) {
     </svg>
   )
 };
+
+export function LeftArrowIcon(props) {
+  return (
+    <svg {...props} className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <g id="Ellipse_5" data-name="Ellipse 5" fill="none" stroke="#26292e" strokeWidth="1" opacity="0.1">
+        <circle cx="16" cy="16" r="16" stroke="none"/>
+        <circle cx="16" cy="16" r="15.5" fill="none"/>
+      </g>
+      <g id="vuesax_linear_arrow-down" data-name="vuesax/linear/arrow-down" transform="translate(274 -226) rotate(90)" opacity={props.disabled ? '0.4' : '1'}>
+        <g id="arrow-down" transform="translate(236 252)">
+          <path id="Vector" d="M7.82,0,4.6,3.34a.955.955,0,0,1-1.382,0L0,0" transform="translate(2.09 4.429)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+          <path id="Vector-2" data-name="Vector" d="M0,0H12V12H0Z" transform="translate(12 12) rotate(180)" fill="none" opacity="0"/>
+        </g>
+      </g>
+</svg>
+  )
+}
+
+export function RightArrowIcon(props) {
+  return (
+    <svg {...props} className='cursor-pointer' xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <g id="Ellipse_6" data-name="Ellipse 6" fill="none" stroke="#26292e" strokeWidth="1" opacity="0.1">
+        <circle cx="16" cy="16" r="16" stroke="none"/>
+        <circle cx="16" cy="16" r="15.5" fill="none"/>
+      </g>
+      <g id="vuesax_linear_arrow-down" data-name="vuesax/linear/arrow-down" transform="translate(22 10) rotate(90)" opacity={props.disabled ? '0.4' : '1'}>
+        <g id="arrow-down" transform="translate(0 0)">
+          <path id="Vector" d="M7.82,3.636,4.6.3A.955.955,0,0,0,3.219.3L0,3.636" transform="translate(2.09 3.935)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+          <path id="Vector-2" data-name="Vector" d="M0,12H12V0H0Z" transform="translate(12 12) rotate(180)" fill="none" opacity="0"/>
+        </g>
+      </g>
+    </svg>
+
+  )
+}
+
+export function EmailIcon(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+      <g id="vuesax_linear_sms" data-name="vuesax/linear/sms" transform="translate(-556 -250)">
+        <g id="sms" transform="translate(556 250)">
+          <path id="Vector" d="M10.022,11.384H3.341A3,3,0,0,1,0,8.036V3.348A3,3,0,0,1,3.341,0h6.681a3,3,0,0,1,3.341,3.348V8.036A3,3,0,0,1,10.022,11.384Z" transform="translate(1.319 2.308)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2"/>
+          <path id="Vector-2" data-name="Vector" d="M6.595,0,4.53,1.649a2.088,2.088,0,0,1-2.473,0L0,0" transform="translate(4.703 6.01)" fill="none" stroke="#26292e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2"/>
+          <path id="Vector-3" data-name="Vector" d="M0,0H16V16H0Z" fill="none" opacity="0"/>
+        </g>
+      </g>
+    </svg>
+  )
+}
+export function CloseIcon(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <g id="Group_10" data-name="Group 10" transform="translate(-997.23 -445.19)">
+        <path id="Vector" d="M7.908,7.908,0,0" transform="translate(1009.322 457.19)" fill="none" stroke="#292d32" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+        <path id="Vector-2" data-name="Vector" d="M7.908,0,0,7.908" transform="translate(1009.23 457.282)" fill="none" stroke="#292d32" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"/>
+      </g>
+      <g id="Ellipse_7" data-name="Ellipse 7" fill="none" stroke="#26292e" strokeWidth="1" opacity="0.1">
+        <circle cx="16" cy="16" r="16" stroke="none"/>
+        <circle cx="16" cy="16" r="15.5" fill="none"/>
+      </g>
+    </svg>
+  )
+}
